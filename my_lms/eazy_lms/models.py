@@ -9,6 +9,9 @@ class Teacher(models.Model):
     phone = models.CharField(max_length=100)
     address = models.TextField
     password = models.CharField(max_length=100)
+    class meta:
+        verbose_name_plural='Teachers'
+    
 
 
 class Student(models.Model):
@@ -19,9 +22,15 @@ class Student(models.Model):
     password = models.CharField(max_length=100) 
     interested_categories = models.TextField()
     
+    class meta:
+        verbose_name_plural='Students'
+    
 class CourseCategory(models.Model):
     title =  models.CharField(max_length=100)
     description: models.TextField()
+    
+    class meta:
+        verbose_name_plural='Course Categories'
     
     
     
@@ -39,3 +48,6 @@ class Course(models.Model):
     course_end_date = models.DateField()
     course_status = models.BooleanField(default=False)
     category =  models.ForeignKey(CourseCategory, on_delete=models.CASCADE)
+    
+    class meta:
+        verbose_name_plural='Courses'

@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #3rd party app
     'eazy_lms'
+    # django rest framework
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
