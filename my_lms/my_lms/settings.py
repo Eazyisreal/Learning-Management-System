@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'eazy_lms',
     # django rest framework
     'rest_framework',
+    # rest framework Token auth
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +105,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+REST_fRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthetication',
+    ],
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
