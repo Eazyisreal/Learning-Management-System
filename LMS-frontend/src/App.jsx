@@ -1,9 +1,12 @@
-import LandingPage from './pages/LandingPage'
+// import LandingPage from './pages/LandingPage'
+
+import NavBar from './layouts/NavBar'
 
 function App (){
   return (
     <>
-    <LandingPage />
+    <NavBar />
+    {/* <LandingPage /> */}
     </>
   )
 }
